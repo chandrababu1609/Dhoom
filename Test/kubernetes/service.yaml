@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: test
+  labels:
+    app: test
+  name: test
+spec:
+  ports:
+  
+    - protocol: TCP
+      port: 9999
+      targetPort: 9999
+   
+   
+  selector:
+    app: test
+  type: ClusterIP
